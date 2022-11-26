@@ -1,0 +1,196 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins',sans-serif;
+}
+body{
+  display: grid;
+  height: 100%; 
+  
+}
+.wrapper{
+  height: 220px;
+  width: 500px;
+  background: red;
+  background: linear-gradient(135deg,#04d261,#e8770d,#f535df);
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-60%);
+  animation: animate 4.5s linear infinite;
+}
+.wrapper .display,
+.wrapper span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.wrapper .display{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: blue;
+  height: 190px;
+  width: 465px;
+  text-align: center;
+}
+.wrapper .display #time1{
+  line-height: 185px;
+  color: rgb(149, 196, 242);
+  font-weight:600;
+  font-size: 65px;
+  letter-spacing: 5px;
+  background: linear-gradient(135deg,#03ac4f,#c6b30a,#67055c);
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+  animation: animate 4.5s linear infinite;
+}
+@keyframes animate {
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+.wrapper span{
+  height: 00%;
+  width: 100;
+  background: inherit;
+}
+.wrapper span:first-child{
+    filter: blur(10px);
+}
+.wrapper span:last-child{
+  filter: blur(20px);
+}
+.clock{
+  position: absolute;
+  top: 23%;
+  left: 38%;
+  transform: translate(-38%,-23%);
+  color: white;
+  text-decoration: underline;
+  background: linear-gradient(90deg,blue,rgb(62, 11, 11),green);
+  
+  
+}
+span{
+  background-color: #03ac4f;
+}
+.App {
+  text-align: center;
+  background-color: blue;
+  font-size: 50px;
+  height: 100vh;
+
+}
+.wave{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(wave.png);
+  background-size: 1000px 100px;
+}
+.wave.wave1
+{
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+.wave.wave2
+{
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+.wave.wave3
+{
+  animation: animate2 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -5s;
+  bottom: 15;
+}
+.wave.wave4
+{
+  animation: animate2 15s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes animate{
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: 1100px;
+  }
+}
+@keyframes animate2{
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: -1000px;
+  }
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+button{
+  width: 80px;
+  height: 30px;
+  background-color: aquamarine;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 20px 5px 5px 5px;
+  box-shadow: 2px 5px rgb(39, 37, 37);
+  font-weight:500;
+  transition: all 0.2s;
+  
+}
+.time{
+  font-size: 100px;
+}
+button:hover{background-color: #27752a;
+  color: white;
+  animation-duration: 0.5s;
+}
+button:active{
+  background-color: #27752a;
+  box-shadow: 0 5px #666;
+  transform: translateY(15px);
+}
+
+span{
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  
+}
+span{
+  position: relative;
+  top: 10px;
+  margin: 5px;
+}
